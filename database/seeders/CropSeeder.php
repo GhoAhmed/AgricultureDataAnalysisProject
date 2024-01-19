@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Crop;
 use Illuminate\Database\Seeder;
 
 class CropSeeder extends Seeder
@@ -12,6 +12,6 @@ class CropSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        Crop::factory(10)->create();
     }
 }

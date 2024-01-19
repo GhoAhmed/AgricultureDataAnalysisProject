@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Soil;
 use Illuminate\Database\Seeder;
 
 class SoilSeeder extends Seeder
@@ -12,6 +12,6 @@ class SoilSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        Soil::factory(10)->create();
     }
 }

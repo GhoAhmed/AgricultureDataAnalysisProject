@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Engine;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -9,6 +10,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class EngineFactory extends Factory
 {
+    protected $model = Engine::class;
     /**
      * Define the model's default state.
      *
@@ -17,7 +19,8 @@ class EngineFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'status' => $this->faker->randomElement(['active', 'inactive']),
+            'user_id' => $this->faker->randomElement([1, 2]),
         ];
     }
 }

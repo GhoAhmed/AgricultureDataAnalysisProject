@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Crop;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -9,6 +10,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class CropFactory extends Factory
 {
+    protected $model = Crop::class;
     /**
      * Define the model's default state.
      *
@@ -17,7 +19,10 @@ class CropFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'name' => $this->faker->word,
+            'yield' => $this->faker->randomFloat(2, 0, 1000),
+            'planting_date' => $this->faker->date,
+            'user_id' => $this->faker->randomElement([1, 2]),
         ];
     }
 }

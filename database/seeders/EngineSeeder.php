@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Engine;
 use Illuminate\Database\Seeder;
 
 class EngineSeeder extends Seeder
@@ -12,6 +12,6 @@ class EngineSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        Engine::factory(10)->create();
     }
 }

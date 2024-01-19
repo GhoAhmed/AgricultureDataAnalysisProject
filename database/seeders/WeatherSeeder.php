@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Weather;
 use Illuminate\Database\Seeder;
 
 class WeatherSeeder extends Seeder
@@ -12,6 +12,6 @@ class WeatherSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        Weather::factory(10)->create();
     }
 }
