@@ -1,0 +1,17 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Weather extends Model
+{
+    use HasFactory;
+    protected $fillable = ['date', 'temperature', 'humidity', 'precipitation'];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+}
